@@ -1,5 +1,5 @@
-const League = require("./models/leagues")
-const Team = require("./models/teams")
+const League = require("./models/Leagues")
+const Team = require("./models/Teams")
 
 const leagueSeedData = require("./leagues.json")
 const teamSeedData = require("./teams.json")
