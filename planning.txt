@@ -1,0 +1,36 @@
+- 3 models: Football Leagues in America, Teams in the NFL, Players in NFL
+
+https://www.thesportsdb.com/api/v1/json/1/search_all_leagues.php?c=USA&s=American%20Football
+Leagues Model to include:
+- "strLeague"
+- "strLeagueAlternate"
+- "intFormedYear"
+- "strWebsite"
+- "strDescriptionEN"
+
+https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=4391
+Teams Model to include:
+- "strTeam"
+- "strTeamShort"
+- "strManager"
+- "strStadium"
+- "strStadiumLocation"
+- "intStadiumCapacity"
+- "strWebsite"
+- "strDescriptionEN"
+- Players?
+
+https://www.thesportsdb.com/api/v1/json/1/lookup_all_players.php?id=134946
+Players Model to include:
+- "strPlayer"
+- "strTeam" - related to teams model
+- "dateBorn"
+- "strDescriptionEN"
+- "strPosition"
+- "strHeight"
+- "strWeight"
+- "strThumb"
+
+
+
+
