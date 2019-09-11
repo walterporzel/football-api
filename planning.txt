@@ -1,4 +1,5 @@
-- 3 models: Football Leagues in America, Teams in the NFL, Players in NFL
+The three models in my project are football leagues in the US, Teams in the NFL, and Players. For the MVP players and teams will be related to each other by the strTeam field
+ 
 
 https://www.thesportsdb.com/api/v1/json/1/search_all_leagues.php?c=USA&s=American%20Football
 Leagues Model to include:
