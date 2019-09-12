@@ -9,10 +9,11 @@ const teamSchema = new mongoose.Schema({
     intStadiumCapacity: String,
     strWebsite: String,
     strDescriptionEN: String,
-    Players: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Players"
-    }
+},{ toJSON: { virtuals: true } })
+teamSchema.virtual('players',{
+    ref: 'Player',
+    localField: 'strTeam',
+    foreignField: 'strTeam'
 })
 
 module.exports = mongoose.model("Team", teamSchema)

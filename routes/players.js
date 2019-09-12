@@ -8,5 +8,6 @@ playersRouter.get("/:player",playersController.show);
 playersRouter.post("/",playersController.create);
 playersRouter.put('/:player',playersController.update);
 playersRouter.delete('/:player',playersController.destroy);
+playersRouter.post("/createWithTeam",playersController.createWithTeam);
 
 module.exports = playersRouter;
