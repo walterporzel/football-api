@@ -11,7 +11,7 @@ const teamSchema = new mongoose.Schema({
     strDescriptionEN: String,
     players:[{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Player"
+        ref: "Players"
     }]
 })
-module.exports = mongoose.model("Team", teamSchema)
+module.exports = mongoose.model("Team", teamSchema);
