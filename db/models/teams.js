@@ -9,5 +9,9 @@ const teamSchema = new mongoose.Schema({
     intStadiumCapacity: String,
     strWebsite: String,
     strDescriptionEN: String,
+    players:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Player"
+    }]
 })
 module.exports = mongoose.model("Team", teamSchema)
