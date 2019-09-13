@@ -1,3 +1,4 @@
+// Seeds all data not related to a different model
 const mongoose = require("./connection")
 const League = require("./models/Leagues")
 const Team = require("./models/Teams")

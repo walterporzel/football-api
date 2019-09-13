@@ -46,6 +46,7 @@ module.exports = {
         Player.findOneAndUpdate({strPlayer: req.params.player},updatedPlayer, {new: true})
         .then(player => res.json(player));
     },
+    // This enables a player to be traded from one team to another
     trade: (req,res)=> {
         const newTeam = req.params.id;
         const playerName = req.params.name;
