@@ -7,6 +7,7 @@ const leagueSeedData = require("./leagues.json")
 const teamSeedData = require("./teams.json")
 const playerSeedData = require("./players.json")
 
+// playerdata array pulls all fields from player json data except team which is seeded in the related models seed file
 const playerRawData = playerSeedData.map(playerJson => {
     const playerData = {}
 
@@ -21,6 +22,7 @@ const playerRawData = playerSeedData.map(playerJson => {
     return playerData
 })
 
+// clears out and seeds each database with non-related data
 League.deleteMany({}).then(() => {
     League.create(leagueSeedData).then((leagues) => {
         console.log(leagues);

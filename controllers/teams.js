@@ -3,7 +3,6 @@ const Team = require("../db/models/Teams");
 module.exports = {
     index: (req,res) => {
         Team.find({})
-        // .populate('players')
         .then(teams =>{
             res.json(teams);
         })
