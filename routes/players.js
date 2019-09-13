@@ -18,6 +18,9 @@ playersRouter.post("/createWithTeam",playersController.createWithTeam);
 // Update: updates a players data
 playersRouter.put('/:player',playersController.update);
 
+// Trade player from one team to another
+playersRouter.put('/trade/:name/:id',playersController.trade);
+
 // Delete: removes a player document
 playersRouter.delete('/:player',playersController.destroy);
 
