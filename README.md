@@ -1,4 +1,4 @@
-# FootBall API
+# Football API
 
 ## Description
 
