@@ -22,4 +22,5 @@ There are 3 different routes out for the main API: /leagues, /teams, and /player
 
 In addition to these routes a player and team can be created simultaniously via the 'players/createWithTeam' route. Please note that if a new player and team are created via this route and they need to be removed, the player and team must each be individually deleted from each database.
 
+Players can additionally be moved from one team another via the 'players/trade/:name/:id' where name is the name of the player to be traded and id is the id number of the team the player is to be traded too.
 

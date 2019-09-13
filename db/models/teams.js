@@ -14,4 +14,5 @@ const teamSchema = new mongoose.Schema({
         ref: "Players"
     }]
 })
+
 module.exports = mongoose.model("Team", teamSchema);
