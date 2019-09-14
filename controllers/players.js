@@ -50,9 +50,10 @@ module.exports = {
     trade: (req,res)=> {
         const newTeam = req.params.id;
         const playerName = req.params.name;
+        
 
         Player.findOneAndUpdate({strPlayer: playerName},{"$set": {strTeam: newTeam}},{new:true})
-        .then(player => res.json(player))  
+        .then(player => res.json(player))
     },
     destroy: (req,res) => {
         Player.findOneAndDelete({strPlayer: req.params.player})
