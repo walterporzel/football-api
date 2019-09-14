@@ -12,7 +12,7 @@ This API was built using Mongo, Mongoose, and Express.js. It was deployed via he
 
 ## Technical Description
 
-There are 3 different routes out for the main API: /leagues, /teams, and /players. Within each route there is basic CRUD functionality set up:
+There are 3 different routes out for the main API: /leagues, /teams, and /players. Each route is configured with CRUD functionality:
 
 * Index: All leagues/teams/players can be retrived via the 'get' method
     * /leagues - retrieves all leagues
