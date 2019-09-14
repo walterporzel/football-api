@@ -13,6 +13,6 @@ const playerSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Team"
     }
-})
+},{ versionKey: false })
 
 module.exports = mongoose.model("Players", playerSchema);

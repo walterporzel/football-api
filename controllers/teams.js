@@ -3,14 +3,14 @@ const Team = require("../db/models/Teams");
 module.exports = {
     index: (req,res) => {
         Team.find({})
-        .populate("players","strPlayer")
+        .populate("players",{strPlayer: 1, _id:0})
         .then(teams =>{
             res.json(teams);
         })
     },
     show: (req,res) => {
         Team.findOne({strTeamShort: req.params.team})
-        .populate("players","strPlayer")
+        .populate("players",{strPlayer: 1, _id:0})
         .then(team =>
             res.json(team));
     },

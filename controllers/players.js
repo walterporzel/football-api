@@ -6,7 +6,7 @@ module.exports = {
     index: (req,res) => {
         Player.find({})
         // populates players teams in output, pulling forward only the team name and abreviation
-        .populate("strTeam","strTeam strTeamShort")
+        .populate("strTeam",{strTeam: 1, strTeamShort: 1, _id:0})
         .then(players =>{
             res.json(players);
         })
@@ -14,7 +14,7 @@ module.exports = {
     show: (req,res) => {
         Player.findOne({strPlayer: req.params.player})
         // populates players teams in output, pulling forward only the team name and abreviation
-        .populate("strTeam","strTeam strTeamShort")
+        .populate("strTeam",{strTeam: 1, strTeamShort: 1, _id:0})
         .then(player =>
             res.json(player));
     },
